@@ -1,0 +1,169 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <script src = "js/index.js" type = "text/javascript"/></script>
+</head>
+
+<body>
+    <h1>Formulario Información Alta Telefónica</h1>
+    <form action="./procesarFormulario.php" name="telefonica">
+        <fieldset class="backgoundfieldPersonalData">
+            <legend>Datos Personales</legend>
+            <div>
+                <table>
+                    <tr>
+                        <td>Nombre:</td>
+                        <td> <input class="userimputs" type="text" name="nombre" maxlength="30" /></td>
+                    </tr>
+                    <tr>
+                        <td>Apellidos:</td>
+                        <td><input class="userimputs" type="text" name="apellidos" maxlength="60" /></td>
+                    </tr>
+                    <tr>
+                        <td>Dirección:</td>
+                        <td><input class="userimputs" type="text" name="direccion" maxlength="60" /></td>
+                    </tr>
+                    <tr>
+                        <td>Código Postal:</td>
+                        <td><input class="userimputs" type="text" name="cpostal" pattern="[0-9]{5}" maxlength="5" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Provincia:</td>
+                        <td><input class="userimputs" type="text" name="provincia" /></td>
+                    </tr>
+                </table>
+                <div id="errormsg" style=background-color:red;color:white;padding:0.5%; hidden>                
+                   <p id="textError">ERROR - El código postal y la provincia no coinciden</p> 
+                </div>
+                <div id="correctmsg" style=background-color:green;color:white;padding:0.5%; hidden>                
+                    Provincia y código postal correctos
+                </div>
+
+            </div>
+            <div class="image">
+                <img src="https://cdn.pixabay.com/photo/2014/04/03/10/32/user-310807_960_720.png"
+                    alt="Free for commercial use" style="width: 130px;">
+            </div>
+            
+        </fieldset>
+        <fieldset class="backgoundfield">
+            <legend>Tipo de Contratación</legend>
+            <input type="radio" name="tipoc" value="nuevo" checked="checked">Nueva Contratación
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="radio" name="tipoc" value="porta">Portabilidad &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="radio" name="tipoc" value="cambio">Cambio de Contrato
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br /><br />
+            Elija la compañía actual:
+            <select name="origen">
+                <option value="movistar">Movistar</option>
+                <option value="orange">Orange</option>
+                <option value="vodafone">Vodafone</option>
+                <option value="yoigo">Yoigo</option>
+                <option value="ninguna">No tengo ninguna
+                    compañía</option>
+            </select>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            En caso de portabilidad, elija la nueva compañía:
+            <select name="origen">
+                <option value="movistar">Movistar</option>
+                <option value="orange">Orange</option>
+                <option value="vodafone">Vodafone</option>
+                <option value="yoigo">Yoigo</option>
+            </select>
+        </fieldset>
+        <fieldset class="backgoundfieldPersonalData">
+            <legend>Datos Bancarios</legend>
+            <div>
+                <table>
+                    <tr>
+                        <td>País:</td>
+                        <td> <input class="userimputs" type="text" name="pais" value="ES" /> (sólo válido ES)</td>
+                    </tr>
+                    <tr>
+                        <td>Control IBAN:</td>
+                        <td><input class="userimputs" type="text" name="ciban" placeholder="XX" pattern="[0-9]{2}"
+                                maxlength="2" /> (dos dígitos)</td>
+                    </tr>
+                    <tr>
+                        <td>Entidad:</td>
+                        <td><input class="userimputs" type="text" name="enti" placeholder="XXXX" pattern="[0-9]{4}"
+                                maxlength="4" /> (cuatro dígitos)</td>
+                    </tr>
+                    <tr>
+                        <td>Sucursal:</td>
+                        <td><input class="userimputs" type="text" name="suc" placeholder="XXXX" pattern="[0-9]{4}"
+                                maxlength="4" /> (cuatro dígitos)</td>
+                    </tr>
+                    <tr>
+                        <td>DC:</td>
+                        <td><input class="userimputs" type="text" name="dc" placeholder="XX" pattern="[0-9]{2}"
+                                maxlength="2" /> (dos dígitos)</td>
+                    </tr>
+                    <tr>
+                        <td>Cuenta:</td>
+                        <td><input class="userimputs" type="text" name="cuenta" placeholder="XXXXXXXXXX"
+                                pattern="[0-9]{10}" maxlength="10" /> (diez
+                            dígitos)</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="image">
+                <img src="https://cdn.pixabay.com/photo/2016/09/16/09/21/card-1673581_960_720.png"
+                    alt="Free for commercial use" style="width: 150px;">
+            </div>
+
+        </fieldset>
+        <fieldset class="backgoundfield">
+            <legend>Datos Estadísticos - ¿Cómo nos conoció?</legend>
+            <div>
+                <table>
+                    <tr>
+                        <td><input type="checkbox" name="tv" value="ES" /> A través de la TV</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="radio" /> A través de la radio</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="internet" /> A través de Internet</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="otros" /> Otros</td>
+                    </tr>
+                    <tr>
+                        <td><br />Del 1 al 5 ¿cuánto nos valoraría?<br /><input type="range" min="1" max="5" step="1"
+                                value="1" name="rating" style="width: 300px;" /> Valoración [1-5]</td>
+                    </tr>
+                    <tr>
+                        <td><br />Fecha de la Encuesta: <input class="userimputs" type="date" name="dateQuestionnaire"
+                                value="2019-01-01" /></td>
+                    </tr>
+                </table>
+            </div>
+
+
+
+        </fieldset>
+        <div class="formButtons">
+            <table>
+                <tr>
+                    <td>
+                        <input class="button buttonSubmit" type="submit" value="Enviar Datos" />
+                        <input class="button buttonReset" type="reset" value="Borrar Datos" />
+                    </td>
+                    <td>
+                        <input class="button" type="button" onclick = "showValueRatingMessage();" value="Mostrar Valoración" name='valueRating'/>
+                        <input class="button" type="button" onclick = "showBankAccountMessage();" value="Mostrar Cuenta" name='valueCuentaBancaria'/>
+                        <input class="button" type="button" onclick = "showDayOfWeekMessage();" value="Mostrar Día Semana" name='valueDayFromDateQuestionnaire' />
+                        <input class="button" type="button" onclick = "postalCode();" value="Validar dirección postal" name='validacionPC' />
+
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+
+</html>

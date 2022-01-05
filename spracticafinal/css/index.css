@@ -1,0 +1,98 @@
+ 
+body {
+    font-family: Verdana;
+    margin: 0 130px;
+    background-color: rgb(243, 243, 243);
+}
+.backgoundfieldPersonalData{
+    background-color: rgb(146, 196, 247);
+    display: flex;
+}
+.backgoundfield {
+    background-color: rgb(146, 196, 247);
+
+}
+
+h1 {
+    text-align:center;
+    text-shadow: 2px 2px rgb(255, 153, 0);
+    color: blue;
+    text-transform: uppercase;
+    padding-top: 15px;
+}
+
+legend {
+    background-color: rgb(114, 6, 0);
+    color: white;
+    font-weight: bold;
+    padding: 2px;
+}
+
+
+.userimputs{
+    background-color: rgb(238, 253, 105);
+    margin: 1px;
+    width: 308px;
+}
+
+
+
+input[type="radio"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    padding: 2px;
+    background-clip: content-box;
+    border: 1px solid #000000;
+    background-color: #ffffff;
+    border-radius: 50%;
+  }
+  
+  input[type="radio"]:checked {
+    background-color: #000000;
+  }
+
+  .content{
+    margin: 0px 5px 5px 5px;  
+    height: 220px;  
+    width: 320px;  
+  }
+
+  .image{
+    display: block;
+    margin: auto;
+    margin-left: 15%;
+  }
+
+  .button {
+    background-color: #3076fa; 
+    color: white;
+    padding: 10px 32px;
+    margin: 5px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+
+  }
+
+.formButtons{
+    margin: 10px 0;
+
+}
+  .buttonSubmit{
+    background-color: #4CAF50; 
+
+}
+
+.buttonReset{
+    background-color: #ff0000; 
+
+}
+
+fieldset {
+    margin: 8px ;
+}
+
